@@ -14,12 +14,12 @@ const Navber = () => {
       const [open, setopen] =useState(false)
     // font awesome icone add 
     return (
-        <nav> <div class="m-4" onClick={()=> setopen(!open)}> {open===true? 
+        <nav> <div class="m-2" onClick={()=> setopen(!open)}> {open===true? 
             <FontAwesomeIcon icon={faXmark} > </FontAwesomeIcon>
             :  <FontAwesomeIcon icon={faBars} ></FontAwesomeIcon>}
     
     </div>
-            <ul class="lg:flex m-4">
+            <ul class={`lg:flex m-2 p-2 absolute duration-1000 bg-slate-400 rounded-lg ${open? "top-10":"-top-60"}`}>
             {
                 routes.map(route=> <Link route={route}></Link>)
             }
